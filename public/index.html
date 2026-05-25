@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent 业务场景落地 Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI AGENT BUSINESS DEMOS</p>
+          <h1>AI Agent 业务场景落地 Demo</h1>
+          <p class="lead">以真实业务异常为起点，展示 Agent 如何读取数据、规划任务、协同分析、进入人工审批，并形成可执行的业务处理闭环。</p>
+          <div class="keyword-row" aria-label="核心关键词">
+            <span>业务流程建模</span>
+            <span>Agent 编排</span>
+            <span>角色审批</span>
+            <span>ROI 反馈</span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-action" href="#main-project">查看主项目</a>
+            <a class="secondary-action" href="#agent-capability">Agent 能力说明</a>
+          </div>
+        </div>
+        <div class="signal-board" aria-label="项目能力概览">
+          <div>
+            <span>01</span>
+            <strong>业务异常识别</strong>
+            <p>从尺码咨询、退换货、差评、断码和库存积压等真实问题切入。</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Agent 规划与协同</strong>
+            <p>Planner 规划任务，业务 Agent 调用数据，协同 Agent 汇总问题链路。</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>审批与执行闭环</strong>
+            <p>高风险建议进入角色审批，通过后模拟执行，并沉淀反馈指标。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-project" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">MAIN PROJECT</p>
+          <h2>主项目</h2>
+        </div>
+
+        <article class="project-card featured-project accent-blue">
+          <div class="featured-content">
+            <div class="card-topline">
+              <span class="tag">Agentic Business Workflow</span>
+              <span class="status">Render Demo</span>
+            </div>
+            <h3>服装商品尺码风险协同处理中心</h3>
+            <p>
+              服装电商里，尺码咨询、偏大偏小评价、退换货、断码和库存积压往往分散在客服、商品、售后、库存多个系统里。这个 Demo 模拟 Agent 如何读取多系统数据、规划任务、分析问题链路，并把建议分发给对应角色审批和模拟执行。
+            </p>
+            <p>
+              <strong>Demo 可操作流程：</strong>进入 Demo 后，可创建服装商品尺码风险事件，加载客服、商品、售后、库存样例数据，触发 Planner Agent 拆解任务，查看各业务 Agent 分析结果，处理角色审批待办，并生成最终处理报告。
+            </p>
+            <p>
+              <strong>业务价值：</strong>通过识别尺码信息表达、客服话术、退换货原因和尺码库存结构之间的关联，帮助业务团队减少重复咨询、降低退换货和差评风险，并优化热门/冷门尺码库存处理。
+            </p>
+            <div class="flow-strip" aria-label="主项目展示重点">
+              <span>业务异常事件</span>
+              <span>多系统数据读取</span>
+              <span>Planner 任务规划</span>
+              <span>子 Agent 分析</span>
+              <span>角色审批</span>
+              <span>模拟执行</span>
+              <span>ROI 反馈</span>
+            </div>
+            <div class="roi-block" aria-label="核心 ROI 指标">
+              <h4>核心 ROI 指标</h4>
+              <div class="metric-grid">
+                <span>尺码咨询率下降</span>
+                <span>尺码相关退货率下降</span>
+                <span>客服转人工率下降</span>
+                <span>差评率下降</span>
+                <span>商品转化率提升</span>
+                <span>热门尺码缺货率下降</span>
+                <span>冷门尺码库存周转提升</span>
+                <span>跨部门排查时间缩短</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a id="retailAgentLink" class="primary-action small" href="#" target="_blank" rel="noreferrer">打开 Demo</a>
+              <a class="secondary-action small" href="#agent-capability">查看 Agent 能力</a>
+            </div>
+          </div>
+          <aside class="proof-panel" aria-label="主项目能力体现">
+            <h4>能力体现</h4>
+            <ul class="check-list">
+              <li>业务流程拆解</li>
+              <li>多 Agent 分工与协同</li>
+              <li>数据/工具调用</li>
+              <li>角色权限与审批流</li>
+              <li>ROI 指标与复盘</li>
+            </ul>
+          </aside>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">SUPPORTING PROJECT</p>
+          <h2>辅助项目</h2>
+        </div>
+
+        <article class="project-card supporting-project accent-green">
+          <div>
+            <div class="card-topline">
+              <span class="tag">AI Trend Radar</span>
+              <span class="status">Render Demo</span>
+            </div>
+            <h3>AIHOT 趋势雷达｜辅助项目</h3>
+            <p>
+              用于展示信息源抓取、候选筛选、去重、模型判断和报告生成的自动化链路，作为主项目之外的 AI 应用实践补充。
+            </p>
+            <div class="flow-strip compact" aria-label="AIHOT 展示重点">
+              <span>信息源抓取</span>
+              <span>候选筛选</span>
+              <span>可信度判断</span>
+              <span>趋势归纳</span>
+              <span>报告生成</span>
+            </div>
+          </div>
+          <div class="card-actions align-end">
+            <a id="aiHotLink" class="primary-action small" href="#" target="_blank" rel="noreferrer">打开 Demo</a>
+          </div>
+        </article>
+      </section>
+
+      <section id="agent-capability" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">AGENT CAPABILITY</p>
+          <h2>Agent 能力如何体现在项目里</h2>
+        </div>
+        <div class="capability-grid five">
+          <div>
+            <span class="cap-index">01</span>
+            <strong>规划能力</strong>
+            <p>Planner Agent 根据业务异常拆解任务，决定先分析客服、商品、售后还是库存数据。</p>
+          </div>
+          <div>
+            <span class="cap-index">02</span>
+            <strong>工具调用</strong>
+            <p>业务 Agent 分别读取客服会话、商品评价、退换货记录和尺码库存样例数据。</p>
+          </div>
+          <div>
+            <span class="cap-index">03</span>
+            <strong>协同能力</strong>
+            <p>协同 Agent 将客服、商品、售后、库存结论串成完整问题链路。</p>
+          </div>
+          <div>
+            <span class="cap-index">04</span>
+            <strong>审批能力</strong>
+            <p>客服话术、详情页修改、售后策略和补货建议进入对应角色审批，不由 Agent 直接执行。</p>
+          </div>
+          <div>
+            <span class="cap-index">05</span>
+            <strong>反馈闭环</strong>
+            <p>系统记录处理建议、审批结果和 ROI 指标，用于后续复盘。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="capability-proof" class="section capability">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT THIS PROVES</p>
+          <h2>我想证明的能力</h2>
+        </div>
+        <div class="capability-grid proof-grid">
+          <div>
+            <strong>业务理解</strong>
+            <p>能从真实行业场景识别 AI 应用问题。</p>
+          </div>
+          <div>
+            <strong>需求拆解</strong>
+            <p>能把业务异常拆成角色、流程、数据、审批和指标。</p>
+          </div>
+          <div>
+            <strong>Agent 方案设计</strong>
+            <p>能设计 Planner、业务 Agent、协同 Agent 的分工。</p>
+          </div>
+          <div>
+            <strong>落地意识</strong>
+            <p>理解权限、审批、人工确认和风险边界。</p>
+          </div>
+          <div>
+            <strong>工程实践</strong>
+            <p>能用 Web 页面、Node 后端、模型 API、本地 JSON、Markdown 报告跑通一个可演示闭环。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/config.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
