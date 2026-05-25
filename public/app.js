@@ -92,17 +92,30 @@ function bindTour() {
   const business = document.getElementById("tourBusiness");
   const agent = document.getElementById("tourAgent");
   const value = document.getElementById("tourValue");
+  const counter = document.getElementById("tourCounter");
+  const progress = document.getElementById("tourProgressFill");
+  const toggle = document.getElementById("tourToggle");
 
-  if (!buttons.length || !badge || !title || !description || !business || !agent || !value) return;
+  if (!buttons.length || !badge || !title || !description || !business || !agent || !value || !counter || !progress || !toggle) return;
+
+  const intervalMs = 6500;
+  let activeIndex = 0;
+  let isPlaying = true;
+  let startedAt = Date.now();
+  let rafId = 0;
+  let timerId = 0;
 
   function setTourStep(index) {
     const step = tourSteps[index] || tourSteps[0];
+    activeIndex = index;
+    startedAt = Date.now();
     badge.textContent = step.badge;
     title.textContent = step.title;
     description.textContent = step.description;
     business.textContent = step.business;
     agent.textContent = step.agent;
     value.textContent = step.value;
+    counter.textContent = `${String(index + 1).padStart(2, "0")} / ${String(tourSteps.length).padStart(2, "0")}`;
 
     buttons.forEach((button) => {
       const isActive = Number(button.dataset.tourStep) === index;
@@ -111,9 +124,57 @@ function bindTour() {
     });
   }
 
+  function updateProgress() {
+    if (!isPlaying) return;
+    const elapsed = Date.now() - startedAt;
+    const stepProgress = Math.min(elapsed / intervalMs, 1);
+    const totalProgress = ((activeIndex + stepProgress) / tourSteps.length) * 100;
+    progress.style.width = `${totalProgress}%`;
+    rafId = window.requestAnimationFrame(updateProgress);
+  }
+
+  function scheduleNext() {
+    window.clearTimeout(timerId);
+    timerId = window.setTimeout(() => {
+      setTourStep((activeIndex + 1) % tourSteps.length);
+      scheduleNext();
+    }, intervalMs);
+  }
+
+  function playTour() {
+    isPlaying = true;
+    startedAt = Date.now();
+    toggle.textContent = "暂停播放";
+    scheduleNext();
+    window.cancelAnimationFrame(rafId);
+    updateProgress();
+  }
+
+  function pauseTour() {
+    isPlaying = false;
+    toggle.textContent = "继续播放";
+    window.clearTimeout(timerId);
+    window.cancelAnimationFrame(rafId);
+  }
+
   buttons.forEach((button) => {
-    button.addEventListener("click", () => setTourStep(Number(button.dataset.tourStep)));
+    button.addEventListener("click", () => {
+      pauseTour();
+      setTourStep(Number(button.dataset.tourStep));
+      progress.style.width = `${((activeIndex + 1) / tourSteps.length) * 100}%`;
+    });
   });
+
+  toggle.addEventListener("click", () => {
+    if (isPlaying) {
+      pauseTour();
+      return;
+    }
+    playTour();
+  });
+
+  setTourStep(0);
+  playTour();
 }
 
 bindTour();
