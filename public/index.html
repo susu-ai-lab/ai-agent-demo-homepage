@@ -46,6 +46,75 @@
         </div>
       </section>
 
+      <section id="quick-tour" class="section tour-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">60-SECOND TOUR</p>
+            <h2>60 秒项目导览</h2>
+          </div>
+          <p class="section-summary">用一条业务链路看懂：业务异常如何被 Agent 规划、分析、审批并形成反馈闭环。</p>
+        </div>
+
+        <div class="tour-board">
+          <div class="tour-track" role="tablist" aria-label="60 秒项目导览节点">
+            <button class="tour-step active" type="button" role="tab" aria-selected="true" data-tour-step="0">
+              <span>01</span>
+              业务异常出现
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="1">
+              <span>02</span>
+              读取多系统数据
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="2">
+              <span>03</span>
+              Planner 拆解任务
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="3">
+              <span>04</span>
+              子 Agent 分析
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="4">
+              <span>05</span>
+              协同汇总链路
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="5">
+              <span>06</span>
+              角色审批
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="6">
+              <span>07</span>
+              模拟执行
+            </button>
+            <button class="tour-step" type="button" role="tab" aria-selected="false" data-tour-step="7">
+              <span>08</span>
+              ROI 反馈
+            </button>
+          </div>
+
+          <article class="tour-detail" aria-live="polite">
+            <div class="tour-detail-head">
+              <span id="tourBadge">业务入口</span>
+              <strong id="tourTitle">业务异常出现</strong>
+            </div>
+            <p id="tourDescription">某款连衣裙出现尺码咨询上升、偏小差评增加、M/L 码退货率上升和 L 码库存告急，系统将其识别为需要跨部门处理的尺码风险事件。</p>
+            <div class="tour-meta-grid">
+              <div>
+                <span>业务动作</span>
+                <strong id="tourBusiness">创建风险事件，明确商品、SKU、渠道和异常描述。</strong>
+              </div>
+              <div>
+                <span>Agent 动作</span>
+                <strong id="tourAgent">判断事件类型，准备读取客服、商品、售后和库存数据。</strong>
+              </div>
+              <div>
+                <span>价值输出</span>
+                <strong id="tourValue">把分散问题收敛成一个可追踪、可审批、可复盘的业务事件。</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="main-project" class="section">
         <div class="section-heading">
           <p class="eyebrow">MAIN PROJECT</p>
