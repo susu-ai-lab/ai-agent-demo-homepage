@@ -178,3 +178,24 @@ function bindTour() {
 }
 
 bindTour();
+
+function bindIntroCountdown() {
+  const countdown = document.getElementById("introCountdown");
+  const target = document.getElementById("demo-showcase");
+  if (!countdown || !target) return;
+
+  let remainingSeconds = 60;
+  countdown.textContent = `${remainingSeconds} 秒后自动进入`;
+
+  const timerId = window.setInterval(() => {
+    remainingSeconds -= 1;
+    countdown.textContent = `${remainingSeconds} 秒后自动进入`;
+
+    if (remainingSeconds <= 0) {
+      window.clearInterval(timerId);
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 1000);
+}
+
+bindIntroCountdown();

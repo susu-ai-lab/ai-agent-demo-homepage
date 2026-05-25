@@ -8,7 +8,58 @@
   </head>
   <body>
     <main class="page-shell">
-      <section class="hero">
+      <section id="intro-board" class="intro-board">
+        <div class="intro-panel">
+          <div class="intro-kicker">
+            <span>INTRODUCTION</span>
+            <strong>约 1 分钟后自动进入 Demo 集</strong>
+          </div>
+          <h1>AI Agent 业务场景落地 Demo 集</h1>
+          <p class="intro-lead">
+            各位老师好，我是苏杰。我制作的项目集主要展示我对 AI Agent 应用（以电商服务零售行业为例），在真实业务场景中落地的理解与实践。不是做简单工具页面，而是从业务问题出发，拆解流程、数据、角色、审批和价值指标，再设计 Agent 如何参与业务处理闭环。
+          </p>
+
+          <div class="intro-grid">
+            <article>
+              <span class="intro-number">01</span>
+              <h2>项目一：服装商品尺码风险协同处理中心</h2>
+              <p>这是主项目，聚焦服装电商中的高频业务问题：尺码咨询多、偏大偏小差评、退换货率高、热门尺码缺货、冷门尺码积压等。</p>
+              <p>项目模拟企业真实业务流程：当某个商品出现尺码风险事件后，系统读取客服、商品、售后、库存等样例数据，由 Planner Agent 拆解分析任务，再由客服 Agent、商品运营 Agent、售后/库存 Agent 分别分析问题，最后由协同 Agent 汇总问题链路，并把客服话术、详情页修改、售后策略、补货建议等动作提交给对应角色审批。</p>
+              <h3>这个项目重点体现</h3>
+              <ul>
+                <li>从业务异常到 Agent 工作流的产品设计能力</li>
+                <li>多系统数据如何被 Agent 调用和解释</li>
+                <li>多 Agent 如何分工、协同和汇总</li>
+                <li>高风险动作为什么要进入人工审批</li>
+                <li>如何用 ROI 指标衡量业务价值，例如降低尺码咨询率、降低退货率、减少差评、提升转化、优化库存结构</li>
+              </ul>
+            </article>
+
+            <article>
+              <span class="intro-number">02</span>
+              <h2>项目二：AIHOT 趋势雷达</h2>
+              <p class="intro-subtitle">从普通人如何精准了解 AI 的角度</p>
+              <p>这是辅助项目，面向 AI 行业信息过载的问题。项目展示从公开信息源抓取、候选筛选、去重、可信度判断、模型分析到日报生成的自动化链路。</p>
+              <p>它主要体现我对信息流处理类 AI 应用的理解，包括：如何设计信息源、筛选标准、模型判断逻辑、结构化报告和趋势看板。</p>
+              <h3>两个项目共同展示的能力</h3>
+              <ul>
+                <li>业务理解：能从真实行业场景中识别适合 AI 介入的问题</li>
+                <li>需求拆解：能把业务异常拆成流程、角色、数据、审批和指标</li>
+                <li>Agent 方案设计：能设计 Planner、业务 Agent、协同 Agent 的分工机制</li>
+                <li>产品落地意识：理解权限、审批、人工确认、风险边界和 ROI 反馈</li>
+                <li>工程实践：能用 Web 页面、Node 后端、模型 API、本地 JSON、Markdown 报告等方式跑通 Demo 闭环</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="intro-actions">
+            <a class="primary-action" href="#demo-showcase">直接查看 Demo 集</a>
+            <span id="introCountdown">60 秒后自动进入</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo-showcase" class="hero">
         <div class="hero-copy">
           <p class="eyebrow">AI AGENT BUSINESS DEMOS</p>
           <h1>AI Agent 业务场景落地 Demo</h1>
